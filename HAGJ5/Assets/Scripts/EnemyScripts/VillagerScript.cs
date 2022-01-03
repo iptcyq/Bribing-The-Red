@@ -104,6 +104,8 @@ public class VillagerScript : MonoBehaviour
                 }
 
                 randomSpot = new Vector2(spot, transform.position.y);
+
+                waitTime = 0f;
                 
             }
             else if (hit.collider.tag == "Enemy")
@@ -115,7 +117,7 @@ public class VillagerScript : MonoBehaviour
                 randomSpot = new Vector2(spot, transform.position.y);
 
 
-                waitTime = startWaitTime;
+                waitTime = 0f;
 
             }
         }

@@ -25,22 +25,24 @@ public class BulletScript : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, distance, whatisSolid);
         if (hit.collider != null)
         {
-            //if from different teams
-            if (hit.collider.GetComponent<Healthsystem>().team != teamName)
+            if (!hit.collider.CompareTag ("Environment")) //if didnt hit environment
             {
-                if (hit.collider.CompareTag("Enemy"))
+                //if from different teams
+                if (hit.collider.GetComponent<Healthsystem>().team != teamName)
                 {
-                    hit.collider.GetComponent<Healthsystem>().TakeDmg(1);
+                    if (hit.collider.CompareTag("Enemy"))
+                    {
+                        hit.collider.GetComponent<Healthsystem>().TakeDmg(1);
+                    }
+
+                    if (hit.collider.CompareTag("Villager"))
+                    {
+                        hit.collider.GetComponent<Healthsystem>().TakeDmg(1);
+                    }
                 }
-
-                if (hit.collider.CompareTag("Villager"))
-                {
-                    hit.collider.GetComponent<Healthsystem>().TakeDmg(1);
-                }
-
-                DestroyProjectile();
-
             }
+            
+            DestroyProjectile();
         }
 
 

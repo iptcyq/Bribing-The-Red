@@ -29,7 +29,7 @@ public class MilitaryScript : MonoBehaviour
 
     private void Start()
     {
-        startWaitTime = Random.Range(1f, 3f);
+        startWaitTime = Random.Range(2f, 4f);
         waitTime = startWaitTime;
     }
 
