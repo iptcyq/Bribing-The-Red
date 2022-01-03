@@ -24,10 +24,17 @@ public class PlayerMovement : MonoBehaviour
     public int extraJumps = 2;
     private int amtOfJumps;
 
+    //hide
+    public LayerMask whatIsCover;
+    private bool isInCover = false;
+    private BoxCollider2D col;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<BoxCollider2D>();
+
         amtOfJumps = extraJumps;
     }
 
@@ -36,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
-        moveInput = Input.GetAxis("Horizontal");
+        moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
         if (facingRight == false && moveInput > 0)
@@ -46,6 +53,20 @@ public class PlayerMovement : MonoBehaviour
         else if (facingRight == true && moveInput < 0)
         {
             Flip();
+        }
+
+
+        isInCover = Physics2D.OverlapCircle(transform.position, 1f, whatIsCover);
+        if (Input.GetKey(KeyCode.C) && isInCover) //crouch or hide
+        {
+            //disable collider
+            col.enabled = false;
+
+            //activate mask where hiding or smth
+        }
+        else
+        {
+            col.enabled = true;
         }
     }
 

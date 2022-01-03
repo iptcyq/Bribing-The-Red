@@ -8,12 +8,15 @@ public class Healthsystem : MonoBehaviour
     public int fullHealth = 5;
     private int currentHealth;
 
-    public Slider healthBar;
+    public GameObject _healthBar;
+    private Slider healthBar;
+
     public Color lowhealth;
     public Color highHealth;
     public Vector3 offset;
 
     public GameObject deathEffect;
+    public GameObject WScanvas;
 
     public string team;
 
@@ -25,6 +28,14 @@ public class Healthsystem : MonoBehaviour
 
     public void TakeDmg(int dmg)
     {
+        if (healthBar == null)
+        {
+            GameObject HealthBar = Instantiate(_healthBar, transform.position, Quaternion.identity, WScanvas.transform); //spawn
+            HealthBar.SetActive(false);
+            HealthBar.transform.localScale = new Vector3(1, 1, 1); //set size
+            healthBar = HealthBar.GetComponent<Slider>();
+            HealthBar.SetActive(true);
+        }
         currentHealth -= dmg;
     }
 
@@ -56,8 +67,11 @@ public class Healthsystem : MonoBehaviour
 
     private void Update()
     {
-        healthBar.transform.position = Camera.main.WorldToScreenPoint(transform.position + offset);
-        SetHealth();
+        if (healthBar != null)
+        {
+            healthBar.transform.position = Camera.main.WorldToScreenPoint(transform.position + offset);
+            SetHealth();
+        }
 
         if (currentHealth <= 0)
         {
