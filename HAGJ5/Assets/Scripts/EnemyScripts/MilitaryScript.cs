@@ -64,7 +64,7 @@ public class MilitaryScript : MonoBehaviour
                     if (Time.time > nextShotTime)
                     {
                         Vector3 difference = target.position - transform.position;
-                        float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg - 90f;
+                        float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
                         GameObject bullet = Instantiate(projectile, transform.position, Quaternion.Euler(0f, 0f, rotZ));
                         bullet.GetComponent<BulletScript>().teamName = "Enemy";

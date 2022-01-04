@@ -46,7 +46,7 @@ public class BulletScript : MonoBehaviour
         }
 
 
-        transform.Translate(Vector2.up * speed * Time.deltaTime);
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
 
     void DestroyProjectile()
