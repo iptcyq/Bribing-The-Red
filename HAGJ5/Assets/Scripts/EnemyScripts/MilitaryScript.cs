@@ -6,14 +6,16 @@ public class MilitaryScript : MonoBehaviour
 {
     public bool advanced = false;
 
+    //looks
+    private bool facingRight = true;
+    public Animator anim;
+
     //spot player
     public float visionRange = 5;
     public LayerMask whatIsVisible;
 
     public float startWaitTime;
     private float waitTime;
-
-    private bool facingRight = true;
 
     //follow
     public float speed = 4f;
@@ -31,6 +33,8 @@ public class MilitaryScript : MonoBehaviour
     {
         startWaitTime = Random.Range(2f, 4f);
         waitTime = startWaitTime;
+        
+        anim.SetBool("isRunning", false);
     }
 
 
@@ -57,10 +61,13 @@ public class MilitaryScript : MonoBehaviour
 
                 if (Vector2.Distance(transform.position, target.position)> attackDist)
                 {
+                    anim.SetBool("isRunning", true);
                     transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
                 }
                 else
                 {
+                    anim.SetBool("isRunning", false);
+
                     if (Time.time > nextShotTime)
                     {
                         Vector3 difference = target.position - transform.position;
@@ -76,6 +83,8 @@ public class MilitaryScript : MonoBehaviour
         }
         else
         {
+            anim.SetBool("isRunning", false);
+
             if (!facingRight)
             {
                 Debug.DrawLine(transform.position, transform.position - transform.right * visionRange, Color.green);
@@ -89,6 +98,7 @@ public class MilitaryScript : MonoBehaviour
         if (waitTime <= 0)
         {
             facingRight = !facingRight;
+            Flip();
 
             if (advanced)
             {
@@ -101,5 +111,14 @@ public class MilitaryScript : MonoBehaviour
         {
             waitTime -= Time.deltaTime;
         }
+
+        void Flip()
+        {
+            Vector3 Scaler = transform.localScale;
+            Scaler.x *= -1;
+            transform.localScale = Scaler;
+        }
     }
+
+
 }

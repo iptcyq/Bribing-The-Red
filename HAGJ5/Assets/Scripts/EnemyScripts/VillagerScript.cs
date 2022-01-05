@@ -22,10 +22,13 @@ public class VillagerScript : MonoBehaviour
     private RaycastHit2D hit;
 
     private bool facingRight = true;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
+
         spot = Random.Range(RoamX, RoamY);
         randomSpot = new Vector2(spot, transform.position.y);
 
@@ -48,8 +51,13 @@ public class VillagerScript : MonoBehaviour
             }
             else
             {
+                anim.SetBool("isRunning", false);
                 waitTime -= Time.deltaTime;
             }
+        }
+        else
+        {
+            anim.SetBool("isRunning", true);
         }
 
         //check if player in range, check if hostile

@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     //looks
     private bool facingRight = true;
+    private Animator anim;
 
     //jump
     public float jumpForce = 5f;
@@ -24,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     public int extraJumps = 2;
     private int amtOfJumps;
 
-    //hide
+    //hide /crouch
     public LayerMask whatIsCover;
     private bool isInCover = false;
     private BoxCollider2D col;
@@ -34,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
+        anim = GetComponent<Animator>();
 
         amtOfJumps = extraJumps;
     }
@@ -46,6 +48,17 @@ public class PlayerMovement : MonoBehaviour
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
+
+
+        if (moveInput == 0)
+        {
+            anim.SetBool("isRunning", false);
+        }
+        else
+        {
+            anim.SetBool("isRunning", true);
+        }
+
         if (facingRight == false && moveInput > 0)
         {
             Flip();
@@ -56,15 +69,15 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        isInCover = Physics2D.OverlapCircle(transform.position, 1f, whatIsCover);
-        if (Input.GetKey(KeyCode.C) && isInCover) //crouch or hide
+        isInCover = Physics2D.OverlapCircle(transform.position, 1f, whatIsCover); //hiding
+        if (Input.GetKey(KeyCode.C) && (isInCover)) //crouch or hide
         {
             //disable collider
             col.enabled = false;
-
+            
             //activate mask where hiding or smth
         }
-        else
+        else 
         {
             col.enabled = true;
         }
@@ -75,9 +88,18 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded == true)
         {
             amtOfJumps = extraJumps;
+            anim.SetBool("isJumping", false);
         }
+        else
+        {
+            anim.SetBool("isJumping", true);
+        }
+
+
         if (amtOfJumps>0 && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
         {
+            anim.SetTrigger("takeOff");
+
             rb.velocity = Vector2.up * jumpForce;
             amtOfJumps--;
         }
@@ -90,8 +112,7 @@ public class PlayerMovement : MonoBehaviour
     void Flip()
     {
         facingRight = !facingRight;
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;
+        transform.Rotate(0f, 180f, 0f);
+        
     }
 }

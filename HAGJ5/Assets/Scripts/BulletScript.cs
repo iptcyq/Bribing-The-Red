@@ -25,7 +25,7 @@ public class BulletScript : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, distance, whatisSolid);
         if (hit.collider != null)
         {
-            if (!hit.collider.CompareTag ("Environment")) //if didnt hit environment
+            if (!hit.collider.CompareTag ("Environment") || !hit.collider.CompareTag("item")) //if didnt hit environment
             {
                 //if from different teams
                 if (hit.collider.GetComponent<Healthsystem>().team != teamName)

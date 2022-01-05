@@ -6,18 +6,28 @@ using TMPro;
 
 public class ExamineItem : MonoBehaviour
 {
+    //check if holding anything
     private bool holding = false;
     private bool looking = false;
 
-    private Item itemPicked;
+    //currently holding
     private GameObject itemHolding;
+    public SpriteRenderer showHolding;
 
-    public Image imageDisp; //display to show the item
+    //examine item
+    public Image imageDisp; 
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI desctext;
     public GameObject popUp; //holding all of the above
 
     public LayerMask whatIsPick;
+
+    //inventory
+    public GameObject[] whatIsHeld;
+    public int maxStorage = 5;
+
+    public int currentitem = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +36,9 @@ public class ExamineItem : MonoBehaviour
         looking = false;
 
         popUp.SetActive(false);
+
+        currentitem = 0;
+        SelectItem();
     }
 
     // Update is called once per frame
@@ -34,6 +47,7 @@ public class ExamineItem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && holding) //drop item
         {
             if (looking) { looking = false; }
+
             itemHolding.transform.position = transform.position;
             itemHolding.SetActive(true);
             
@@ -43,7 +57,11 @@ public class ExamineItem : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.E) && !holding) //pick up item
         {
             Collider2D result = Physics2D.OverlapCircle(transform.position, 1f, whatIsPick);
-            PickUp(result.gameObject);
+
+            if (result != null)
+            {
+                PickUp(result.gameObject);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.F)) //examine
@@ -60,6 +78,56 @@ public class ExamineItem : MonoBehaviour
                 popUp.gameObject.SetActive(false);
             }
         }
+
+        //scroll through to hold items
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        {
+            //solidfying the item in storage
+            if (itemHolding == null)
+            {
+                whatIsHeld[currentitem] = null;
+            }
+            else
+            {
+                itemHolding = whatIsHeld[currentitem];
+            }
+
+            //scrolling to new item
+            if (currentitem >= maxStorage-1)
+            {
+                currentitem = 0;
+            }
+            else
+            {
+                currentitem++;
+            }
+            
+            SelectItem();
+        }
+
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        {
+            if (itemHolding == null)
+            {
+                whatIsHeld[currentitem] = null;
+            }
+            else
+            {
+                itemHolding = whatIsHeld[currentitem];
+            }
+
+            if (currentitem <= 0)
+            {
+                currentitem = maxStorage -1;
+            }
+            else
+            {
+                currentitem--;
+            }
+            
+            SelectItem();
+        }
+        
     }
 
     private void PickUp(GameObject obj)
@@ -72,14 +140,32 @@ public class ExamineItem : MonoBehaviour
             itemHolding = obj;
             itemHolding.SetActive(false);
 
-            itemPicked = obj.GetComponent<Item>();
+            Item itemPicked = itemHolding.GetComponent<Item>();
 
             imageDisp.sprite = itemPicked.itemImg;
             titleText.text = itemPicked.dispName;
             desctext.text = itemPicked.description + " \n" + "Value of item: " + itemPicked.value + "   AUTHORISED: " + itemPicked.authorisedToBeHeld;
-            
-            looking = true;
-            popUp.gameObject.SetActive(true);
+        }
+    }
+
+    void SelectItem()
+    {
+        int i = 0;
+        foreach (GameObject item in whatIsHeld)
+        {
+            if (i == currentitem)
+            {
+                if (itemHolding == null)
+                {
+                    showHolding.sprite = null;
+                }
+                else
+                {
+                    //display item
+                    showHolding.sprite = itemHolding.GetComponent<Item>().itemImg;
+                }
+            }
+            i++;
         }
     }
 
