@@ -12,7 +12,6 @@ public class ExamineItem : MonoBehaviour
 
     //currently holding
     private GameObject itemHolding;
-    public SpriteRenderer showHolding;
 
     //examine item
     public Image imageDisp; 
@@ -22,12 +21,6 @@ public class ExamineItem : MonoBehaviour
 
     public LayerMask whatIsPick;
 
-    //inventory
-    public GameObject[] whatIsHeld;
-    public int maxStorage = 5;
-
-    public int currentitem = 0;
-
 
     // Start is called before the first frame update
     void Start()
@@ -36,9 +29,6 @@ public class ExamineItem : MonoBehaviour
         looking = false;
 
         popUp.SetActive(false);
-
-        currentitem = 0;
-        SelectItem();
     }
 
     // Update is called once per frame
@@ -78,56 +68,6 @@ public class ExamineItem : MonoBehaviour
                 popUp.gameObject.SetActive(false);
             }
         }
-
-        //scroll through to hold items
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
-        {
-            //solidfying the item in storage
-            if (itemHolding == null)
-            {
-                whatIsHeld[currentitem] = null;
-            }
-            else
-            {
-                itemHolding = whatIsHeld[currentitem];
-            }
-
-            //scrolling to new item
-            if (currentitem >= maxStorage-1)
-            {
-                currentitem = 0;
-            }
-            else
-            {
-                currentitem++;
-            }
-            
-            SelectItem();
-        }
-
-        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
-        {
-            if (itemHolding == null)
-            {
-                whatIsHeld[currentitem] = null;
-            }
-            else
-            {
-                itemHolding = whatIsHeld[currentitem];
-            }
-
-            if (currentitem <= 0)
-            {
-                currentitem = maxStorage -1;
-            }
-            else
-            {
-                currentitem--;
-            }
-            
-            SelectItem();
-        }
-        
     }
 
     private void PickUp(GameObject obj)
@@ -145,27 +85,6 @@ public class ExamineItem : MonoBehaviour
             imageDisp.sprite = itemPicked.itemImg;
             titleText.text = itemPicked.dispName;
             desctext.text = itemPicked.description + " \n" + "Value of item: " + itemPicked.value + "   AUTHORISED: " + itemPicked.authorisedToBeHeld;
-        }
-    }
-
-    void SelectItem()
-    {
-        int i = 0;
-        foreach (GameObject item in whatIsHeld)
-        {
-            if (i == currentitem)
-            {
-                if (itemHolding == null)
-                {
-                    showHolding.sprite = null;
-                }
-                else
-                {
-                    //display item
-                    showHolding.sprite = itemHolding.GetComponent<Item>().itemImg;
-                }
-            }
-            i++;
         }
     }
 
