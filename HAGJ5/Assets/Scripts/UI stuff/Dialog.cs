@@ -13,9 +13,13 @@ public class Dialog : MonoBehaviour
     private bool isTyping = false;
     private Coroutine co;
 
+    public GameObject dialogueThing;
+
     // Start is called before the first frame update
     void Start()
     {
+        dialogueThing.SetActive(true);
+        dialogueThing.GetComponent<Animator>().enabled = false;
         isTyping = false;
         co = StartCoroutine(Type());
     }
@@ -41,6 +45,11 @@ public class Dialog : MonoBehaviour
                 textDisp.text = "";
                 co = StartCoroutine(Type());
             }
+            else
+            {
+                dialogueThing.GetComponent<Animator>().enabled = true;
+                StartCoroutine(EndScene());
+            }
         }
         else
         {
@@ -49,5 +58,12 @@ public class Dialog : MonoBehaviour
             isTyping = false;
             textDisp.text = sentences[index];
         }
+    }
+
+    IEnumerator EndScene()
+    {
+        dialogueThing.GetComponent<Animator>().SetTrigger("fade");
+        yield return new WaitForSeconds(1f);
+        dialogueThing.SetActive(false);
     }
 }

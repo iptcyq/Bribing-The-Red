@@ -38,18 +38,27 @@ public class DragSnapController : MonoBehaviour
         {
             draggable.transform.position = closestSnapPoint.position;
 
-            draggable.gameObject.SetActive(false);
-
-            for (int i =0; i<= ci.itemNames.Length-1; i++)
+            if (ci.noOfStuff < ci.maxStorage)
             {
-                if (ci.itemNames[i] == draggable.itemName)
+                draggable.gameObject.SetActive(false);
+                ci.AddItem();
+
+                for (int i = 0; i <= ci.itemNames.Length - 1; i++)
                 {
-                    ci.itemObtained[i] = true;
-                    break;
-                }
-                if (i == ci.itemNames.Length - 1)
-                {
-                    ci.noOfUselessStuff++;
+                    if (ci.itemNames[i] == draggable.itemName)
+                    {
+                        ci.itemObtained[i] = true;
+                        break;
+                    }
+                    if (i == ci.itemNames.Length - 1)
+                    {
+                        ci.noOfUselessStuff++;
+                    }
+                    if (draggable.itemName == "Coin")
+                    {
+                        ci.noOfCoins++;
+                        break;
+                    }
                 }
             }
         }

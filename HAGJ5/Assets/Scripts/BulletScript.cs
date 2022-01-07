@@ -30,16 +30,24 @@ public class BulletScript : MonoBehaviour
             if (!hit.collider.CompareTag ("Environment") || !hit.collider.CompareTag("item")) //if didnt hit environment
             {
                 //if from different teams
-                if (hit.collider.GetComponent<Healthsystem>().team != teamName)
+                if (hit.collider.GetComponent<Healthsystem>() != null)
                 {
-                    if (hit.collider.CompareTag("Enemy"))
+                    if (hit.collider.GetComponent<Healthsystem>().team != teamName)
                     {
-                        hit.collider.GetComponent<Healthsystem>().TakeDmg(1);
-                    }
+                        if (hit.collider.CompareTag("Enemy"))
+                        {
+                            hit.collider.GetComponent<Healthsystem>().TakeDmg(1);
+                        }
 
-                    if (hit.collider.CompareTag("Villager"))
-                    {
-                        hit.collider.GetComponent<Healthsystem>().TakeDmg(1);
+                        if (hit.collider.CompareTag("Villager"))
+                        {
+                            hit.collider.GetComponent<Healthsystem>().TakeDmg(1);
+                        }
+
+                        if (hit.collider.CompareTag("Player"))
+                        {
+                            hit.collider.GetComponent<Healthsystem>().TakeDmg(1);
+                        }
                     }
                 }
             }
