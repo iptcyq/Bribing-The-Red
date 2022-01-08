@@ -36,6 +36,16 @@ public class SettingsScript : MonoBehaviour
         }
     }
 
+    public void Settingscene()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            menuOut = !menuOut;
+
+            settingsMenu.SetActive(menuOut);
+        }
+    }
+
     public void ChangeScene(string scene)
     {
         FindObjectOfType<AudioManager>().Play("HPblip");

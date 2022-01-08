@@ -27,11 +27,13 @@ public class Dialog : MonoBehaviour
     IEnumerator Type()
     {
         isTyping = true;
+        FindObjectOfType<AudioManager>().Play("TypingEffect");
         foreach (char letter in sentences[index].ToCharArray())
         {
             textDisp.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+        FindObjectOfType<AudioManager>().Stop("TypingEffect");
         isTyping = false;
     }
 
@@ -55,6 +57,8 @@ public class Dialog : MonoBehaviour
         {
             //load full sentences alr
             StopCoroutine(co);
+            
+            FindObjectOfType<AudioManager>().Stop("TypingEffect");
             isTyping = false;
             textDisp.text = sentences[index];
         }

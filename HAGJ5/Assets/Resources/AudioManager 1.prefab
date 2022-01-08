@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5298261279112727075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5298261279112727073}
+  - component: {fileID: 5298261279112727074}
+  m_Layer: 0
+  m_Name: AudioManager 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5298261279112727073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5298261279112727075}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.034186, y: 0.16424122, z: -0.6833098}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5298261279112727074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5298261279112727075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6065a283ffca5424f9185d1bc55488d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 73afa9b8c7a457542a50ba3f4931846b, type: 3}
+    group: {fileID: 24300002, guid: edc7d894021ff6b4a9aec7611812080f, type: 2}
+    Volume: 0.5
+    Pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: PickUp
+    clip: {fileID: 8300000, guid: 812ab58f6fd009146b1f0a14cb08e266, type: 3}
+    group: {fileID: 24300002, guid: edc7d894021ff6b4a9aec7611812080f, type: 2}
+    Volume: 0.9
+    Pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Shoot
+    clip: {fileID: 8300000, guid: 1b04ef00b382f3b4b8a46a2f5a0f1844, type: 3}
+    group: {fileID: 24300002, guid: edc7d894021ff6b4a9aec7611812080f, type: 2}
+    Volume: 0.9
+    Pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TypingEffect
+    clip: {fileID: 8300000, guid: d1acb1ba763c21a4ea6efae2afe2e017, type: 3}
+    group: {fileID: 24300002, guid: edc7d894021ff6b4a9aec7611812080f, type: 2}
+    Volume: 0.6
+    Pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Dead
+    clip: {fileID: 8300000, guid: e870d97b156d46a4486dae9f65d5cf8a, type: 3}
+    group: {fileID: 24300002, guid: edc7d894021ff6b4a9aec7611812080f, type: 2}
+    Volume: 0.6
+    Pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LPblip
+    clip: {fileID: 8300000, guid: ab717657fe20c564ea117671eada1ebc, type: 3}
+    group: {fileID: 24300002, guid: edc7d894021ff6b4a9aec7611812080f, type: 2}
+    Volume: 0.8
+    Pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: HPblip
+    clip: {fileID: 8300000, guid: bb0ed58e257bfd0489c363db076d9635, type: 3}
+    group: {fileID: 24300002, guid: edc7d894021ff6b4a9aec7611812080f, type: 2}
+    Volume: 0.8
+    Pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: levelUp
+    clip: {fileID: 8300000, guid: cbbcb1fb1fe2b3c4d9e669c7d78ae628, type: 3}
+    group: {fileID: 24300002, guid: edc7d894021ff6b4a9aec7611812080f, type: 2}
+    Volume: 0.7
+    Pitch: 1
+    loop: 0
+    source: {fileID: 0}

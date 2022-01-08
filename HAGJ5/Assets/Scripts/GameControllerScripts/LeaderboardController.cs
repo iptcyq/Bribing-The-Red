@@ -15,9 +15,17 @@ public class LeaderboardController : MonoBehaviour
     public GameObject leaderboardObj;
     public GameObject enterNameObj;
 
+    public TextMeshProUGUI coins;
+    public TextMeshProUGUI useless;
+    public TextMeshProUGUI reward;
+
     // Start is called before the first frame update
     void Start()
     {
+        coins.text = "You collected " + PlayerPrefs.GetInt("noOfCoins") + " coins.";
+        useless.text = "You hoarded " + PlayerPrefs.GetInt("noOfUselessStuff") + " useless items.";
+        reward.text = "You received $" + PlayerPrefs.GetInt("Reward") + " in total.";
+
         enterNameObj.SetActive(true);
         leaderboardObj.SetActive(false);
 

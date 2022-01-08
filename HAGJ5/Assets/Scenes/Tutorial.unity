@@ -187,11 +187,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisp: {fileID: 1189961652}
   sentences:
-  - The insurgency is failing,
-  - people are surrendering left, right and centre.
-  - i think there is approximately 7 days left before attempts at defect will be
-    well and truly impossible.
-  - I need to exploit Red Bribery and leave quickly.
+  - The insurgency is failing, and the Malayan Communist Party is falling apart.
+  - Our people are surrendering left, right and centre, and there's barely anything
+    we can do to stop it.
+  - Surrender seems imminent and I must seize any opportunity to leave this life
+    for a better one.
   typingSpeed: 0.05
   dialogueThing: {fileID: 1830112123}
 --- !u!114 &51383167
@@ -391,8 +391,8 @@ MonoBehaviour:
   m_text: This is the village on the fringe of the jungles, the connection to the
     outside world. Reach this area to end the level!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
+  m_sharedMaterial: {fileID: -7288586952693584114, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -422,7 +422,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -842,141 +842,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0625, y: 1.1375}
   m_EdgeRadius: 0
---- !u!1 &332910864
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 332910865}
-  - component: {fileID: 332910867}
-  - component: {fileID: 332910866}
-  m_Layer: 5
-  m_Name: Text (TMP) (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &332910865
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332910864}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1830112124}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.921, y: 177}
-  m_SizeDelta: {x: 850.237, y: 53.613}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &332910866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332910864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Day One
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &332910867
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332910864}
-  m_CullTransparentMesh: 1
 --- !u!1 &335154553
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,7 +1185,7 @@ RectTransform:
   m_Children:
   - {fileID: 586916223}
   m_Father: {fileID: 1830112124}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1613,107 +1478,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &544938852
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 544938854}
-  - component: {fileID: 544938853}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &544938853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 544938852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6065a283ffca5424f9185d1bc55488d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Theme
-    clip: {fileID: 8300000, guid: 73afa9b8c7a457542a50ba3f4931846b, type: 3}
-    group: {fileID: 24300002, guid: edc7d894021ff6b4a9aec7611812080f, type: 2}
-    Volume: 0.5
-    Pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: PickUp
-    clip: {fileID: 8300000, guid: 812ab58f6fd009146b1f0a14cb08e266, type: 3}
-    group: {fileID: 24300002, guid: edc7d894021ff6b4a9aec7611812080f, type: 2}
-    Volume: 0.9
-    Pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Shoot
-    clip: {fileID: 8300000, guid: 1b04ef00b382f3b4b8a46a2f5a0f1844, type: 3}
-    group: {fileID: 24300002, guid: edc7d894021ff6b4a9aec7611812080f, type: 2}
-    Volume: 0.9
-    Pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: TypingEffect
-    clip: {fileID: 8300000, guid: d1acb1ba763c21a4ea6efae2afe2e017, type: 3}
-    group: {fileID: 24300002, guid: edc7d894021ff6b4a9aec7611812080f, type: 2}
-    Volume: 0.6
-    Pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Dead
-    clip: {fileID: 8300000, guid: e870d97b156d46a4486dae9f65d5cf8a, type: 3}
-    group: {fileID: 24300002, guid: edc7d894021ff6b4a9aec7611812080f, type: 2}
-    Volume: 0.6
-    Pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: LPblip
-    clip: {fileID: 8300000, guid: ab717657fe20c564ea117671eada1ebc, type: 3}
-    group: {fileID: 24300002, guid: edc7d894021ff6b4a9aec7611812080f, type: 2}
-    Volume: 0.8
-    Pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: HPblip
-    clip: {fileID: 8300000, guid: bb0ed58e257bfd0489c363db076d9635, type: 3}
-    group: {fileID: 24300002, guid: edc7d894021ff6b4a9aec7611812080f, type: 2}
-    Volume: 0.8
-    Pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: levelUp
-    clip: {fileID: 8300000, guid: cbbcb1fb1fe2b3c4d9e669c7d78ae628, type: 3}
-    group: {fileID: 24300002, guid: edc7d894021ff6b4a9aec7611812080f, type: 2}
-    Volume: 0.7
-    Pitch: 1
-    loop: 0
-    source: {fileID: 0}
---- !u!4 &544938854
+--- !u!4 &544938854 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5298261279112727073, guid: d27eb99bd319d2c4692e278e0a093bf6, type: 3}
+  m_PrefabInstance: {fileID: 5298261279650320711}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 544938852}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.034186, y: 0.16424122, z: -0.6833098}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1846778507}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &551414555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,8 +1574,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: next
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
+  m_sharedMaterial: {fileID: -7288586952693584114, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1836,7 +1605,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1940,8 +1709,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: (W key, Up Arrow, or SPACE bar to jump)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
+  m_sharedMaterial: {fileID: -7288586952693584114, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1971,7 +1740,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2078,8 +1847,8 @@ MonoBehaviour:
     aiming
     (pointing your mouse) at him, and shooting (Left clicking)/'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
+  m_sharedMaterial: {fileID: -7288586952693584114, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2109,7 +1878,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2431,8 +2200,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Move with WASD or Arrow Keys
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
+  m_sharedMaterial: {fileID: -7288586952693584114, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2462,7 +2231,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2567,8 +2336,8 @@ MonoBehaviour:
   m_text: As a part of the Malayan Communist Party, I have been living in the jungles
     for ages.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
+  m_sharedMaterial: {fileID: -7288586952693584114, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2598,7 +2367,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -12277,7 +12046,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Volume:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 143ab42f2ee7389419cf7f2e3d9a3620, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -12341,7 +12110,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1074891597
@@ -12416,8 +12185,8 @@ MonoBehaviour:
     And store it (its pretty important) in the
     barrel by dragging the leaflet to it.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
+  m_sharedMaterial: {fileID: -7288586952693584114, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12447,7 +12216,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -12636,8 +12405,8 @@ MonoBehaviour:
   m_text: However, the British have started creating policies to flush us out, and
     they are fnally working.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
+  m_sharedMaterial: {fileID: -7288586952693584114, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12667,7 +12436,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -12884,12 +12653,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1830112124}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.921, y: 15.498}
-  m_SizeDelta: {x: 850.237, y: 253.651}
+  m_AnchoredPosition: {x: 20.921, y: 49.347}
+  m_SizeDelta: {x: 850.237, y: 321.349}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1189961652
 MonoBehaviour:
@@ -12913,8 +12682,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
+  m_sharedMaterial: {fileID: -7288586952693584114, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12944,7 +12713,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -13080,8 +12849,8 @@ MonoBehaviour:
   m_text: Store valuable items and store them in your backpack (in the top left corner)
     or in a barrrel.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
+  m_sharedMaterial: {fileID: -7288586952693584114, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13111,7 +12880,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -13496,8 +13265,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Storage
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 143ab42f2ee7389419cf7f2e3d9a3620, type: 2}
+  m_sharedMaterial: {fileID: 8628081109503375290, guid: 143ab42f2ee7389419cf7f2e3d9a3620, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13766,8 +13535,8 @@ MonoBehaviour:
     Don''t
     get too close or he''ll chase you down and eliminate you!'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
+  m_sharedMaterial: {fileID: -7288586952693584114, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13797,7 +13566,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -14205,8 +13974,8 @@ MonoBehaviour:
   m_text: "This is a leaflet dropped into the jungles as part of the British propaganda.
     \n\nPick it up by pressing E.\nExamine it by pressing F."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
+  m_sharedMaterial: {fileID: -7288586952693584114, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14236,7 +14005,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -14342,8 +14111,8 @@ MonoBehaviour:
     reason for fighting is dying out as Malaya seems to be reaching Merdeka (independence)
     soon.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
+  m_sharedMaterial: {fileID: -7288586952693584114, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14373,7 +14142,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -14612,7 +14381,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Settings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 143ab42f2ee7389419cf7f2e3d9a3620, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -14676,7 +14445,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1785863384
@@ -14705,7 +14474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1830112124
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14718,7 +14487,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 332910865}
   - {fileID: 1189961651}
   - {fileID: 428345144}
   m_Father: {fileID: 776030028}
@@ -14993,8 +14761,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'It has been years since the start of the Malayan Emergency in 1948. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
+  m_sharedMaterial: {fileID: -7288586952693584114, guid: cb724f7bc9e985642bb20d3eea9b9af4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15024,7 +14792,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -15275,6 +15043,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c482b7f6f6ca26046a8ba6726971f9eb, type: 3}
+--- !u!1001 &5298261279650320711
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1846778507}
+    m_Modifications:
+    - target: {fileID: 5298261279112727073, guid: d27eb99bd319d2c4692e278e0a093bf6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298261279112727073, guid: d27eb99bd319d2c4692e278e0a093bf6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.034186
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298261279112727073, guid: d27eb99bd319d2c4692e278e0a093bf6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16424122
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298261279112727073, guid: d27eb99bd319d2c4692e278e0a093bf6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6833098
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298261279112727073, guid: d27eb99bd319d2c4692e278e0a093bf6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298261279112727073, guid: d27eb99bd319d2c4692e278e0a093bf6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298261279112727073, guid: d27eb99bd319d2c4692e278e0a093bf6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298261279112727073, guid: d27eb99bd319d2c4692e278e0a093bf6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298261279112727073, guid: d27eb99bd319d2c4692e278e0a093bf6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298261279112727073, guid: d27eb99bd319d2c4692e278e0a093bf6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298261279112727073, guid: d27eb99bd319d2c4692e278e0a093bf6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298261279112727075, guid: d27eb99bd319d2c4692e278e0a093bf6, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d27eb99bd319d2c4692e278e0a093bf6, type: 3}
 --- !u!1001 &7120789607036513699
 PrefabInstance:
   m_ObjectHideFlags: 0
