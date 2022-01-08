@@ -36,6 +36,7 @@ public class Healthsystem : MonoBehaviour
             healthBar = HealthBar.GetComponent<Slider>();
             HealthBar.SetActive(true);
         }
+        StartCoroutine(Flash());
         currentHealth -= dmg;
     }
 
@@ -82,10 +83,19 @@ public class Healthsystem : MonoBehaviour
             }
             else //temp till i sort out their teams
             {
+                FindObjectOfType<AudioManager>().Play("Dead");
                 Destroy(healthBar.gameObject);
                 Instantiate(deathEffect, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }
+    }
+
+    IEnumerator Flash()
+    {
+        FindObjectOfType<AudioManager>().Play("LPblip");
+        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.05f);
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

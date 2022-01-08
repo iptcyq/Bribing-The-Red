@@ -33,6 +33,8 @@ public class AudioManager : MonoBehaviour
             s.source.loop = s.loop;
             s.source.outputAudioMixerGroup = s.group;
         }
+
+        Play("Theme");
     }
 
     public void Play(string name)

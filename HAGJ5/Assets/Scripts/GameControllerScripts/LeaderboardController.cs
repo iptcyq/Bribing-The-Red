@@ -4,16 +4,24 @@ using UnityEngine;
 
 public class LeaderboardController : MonoBehaviour
 {
-    public TMP_InputField memberID, PlayerScore;
+    public TMP_InputField memberID;
+    private int score = 0;
     public int ID = 1235;
 
     public int MaxScores = 7;
     public TextMeshProUGUI[] _score;
     public TextMeshProUGUI[] _names;
 
+    public GameObject leaderboardObj;
+    public GameObject enterNameObj;
+
     // Start is called before the first frame update
     void Start()
     {
+        enterNameObj.SetActive(true);
+        leaderboardObj.SetActive(false);
+
+        score = PlayerPrefs.GetInt("Reward");
         LootLockerSDKManager.StartSession("Player", (response) =>
         {
             if (response.success)
@@ -30,7 +38,7 @@ public class LeaderboardController : MonoBehaviour
 
     public void SubmitScore()
     {
-        LootLockerSDKManager.SubmitScore(memberID.text, int.Parse(PlayerScore.text), ID, (response) => 
+        LootLockerSDKManager.SubmitScore(memberID.text, score, ID, (response) => 
         {
             if (response.success)
             {
@@ -41,6 +49,10 @@ public class LeaderboardController : MonoBehaviour
                 Debug.Log("Failed in submitting");
             }
         });
+
+        enterNameObj.SetActive(false);
+        leaderboardObj.SetActive(true);
+        ShowScores();
     }
 
     public void ShowScores()

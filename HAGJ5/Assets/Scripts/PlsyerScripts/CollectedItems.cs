@@ -5,15 +5,21 @@ using TMPro;
 
 public class CollectedItems : MonoBehaviour
 {
+    [HideInInspector]
     public string[] itemNames = new string[] 
     {
         "BrenGun",
         "Pistol",
+        "Rifle",
+        "Shotgun",
+        "Grenade",
+        "Launcher",
         "RedInfo",
         "OrangeInfo",
         "YellowInfo",
     };
 
+    [HideInInspector]
     public bool[]  itemObtained= new bool[]
     {
         false,
@@ -21,12 +27,21 @@ public class CollectedItems : MonoBehaviour
         false,
         false,
         false,
+        false,
+        false,
+        false,
+        false,
     };
 
+    [HideInInspector]
     public int[] rewardAmt = new int[]
     {
         1000,
-        1000,
+        300,
+        300,
+        150,
+        20,
+        500,
         100000,
         65000,
         2500,
@@ -66,6 +81,8 @@ public class CollectedItems : MonoBehaviour
             }
         }
         c += noOfCoins;
+        PlayerPrefs.SetInt("noOfCoins", c);
+        PlayerPrefs.SetInt("noOfUselessStuff", noOfUselessStuff);
         PlayerPrefs.SetInt("Reward", c);
         return c;
     }

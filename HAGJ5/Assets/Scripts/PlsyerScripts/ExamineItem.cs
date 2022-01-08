@@ -20,11 +20,15 @@ public class ExamineItem : MonoBehaviour
     public GameObject popUp; //holding all of the above
 
     public LayerMask whatIsPick;
+    private Item emptyItem;
+    public GameObject empty;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        emptyItem = empty.GetComponent<Item>();
+
         holding = false;
         looking = false;
 
@@ -42,6 +46,10 @@ public class ExamineItem : MonoBehaviour
             itemHolding.SetActive(true);
             
             itemHolding = null;
+            imageDisp.sprite = emptyItem.itemImg;
+            titleText.text = emptyItem.dispName;
+            desctext.text = emptyItem.description + " \n" + "Value of item: " + emptyItem.value;
+
             holding = false;
         }
         else if (Input.GetKeyDown(KeyCode.E) && !holding) //pick up item
@@ -75,6 +83,7 @@ public class ExamineItem : MonoBehaviour
         if (obj.tag == "item" && !holding)
         {
             //can be picked
+            FindObjectOfType<AudioManager>().Play("PickUp");
             holding = true;
 
             itemHolding = obj;
@@ -84,7 +93,7 @@ public class ExamineItem : MonoBehaviour
 
             imageDisp.sprite = itemPicked.itemImg;
             titleText.text = itemPicked.dispName;
-            desctext.text = itemPicked.description + " \n" + "Value of item: " + itemPicked.value + "   AUTHORISED: " + itemPicked.authorisedToBeHeld;
+            desctext.text = itemPicked.description + " \n" + "Value of item: " + itemPicked.value;
         }
     }
 

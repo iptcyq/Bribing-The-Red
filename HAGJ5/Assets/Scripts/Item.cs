@@ -11,5 +11,4 @@ public class Item : MonoBehaviour
 
     //extra info
     public int value; //its value from brotosh
-    public bool authorisedToBeHeld; //whether or not it is risky to hold
 }

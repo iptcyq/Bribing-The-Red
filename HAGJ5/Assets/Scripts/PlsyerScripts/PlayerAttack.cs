@@ -15,6 +15,8 @@ public class PlayerAttack : MonoBehaviour
     private Sprite storeSprite;
     private bool holdingGun = false;
 
+    public GameObject cursor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,10 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 screenPoint = (Vector3)Input.mousePosition;
+        screenPoint.z = 10f;
+        cursor.transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
+
         if (Input.GetKeyDown(KeyCode.Q))
         {
             holdingGun = !holdingGun;
@@ -40,6 +46,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && currentTimeBtwShots <=  0 && holdingGun)
         {
+            FindObjectOfType<AudioManager>().Play("Shoot");
             GameObject bullet = Instantiate(projectile, firePoint.position, transform.rotation);
             bullet.GetComponent<BulletScript>().teamName = "Player";
             currentTimeBtwShots = timeBtwShots;

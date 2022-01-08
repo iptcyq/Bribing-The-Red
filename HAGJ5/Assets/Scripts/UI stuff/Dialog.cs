@@ -64,6 +64,8 @@ public class Dialog : MonoBehaviour
     {
         dialogueThing.GetComponent<Animator>().SetTrigger("fade");
         yield return new WaitForSeconds(1f);
+
+        Cursor.visible = false;
         dialogueThing.SetActive(false);
     }
 }

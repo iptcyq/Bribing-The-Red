@@ -442,7 +442,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  extraJumps: 2
+  extraJumps: 1
   whatIsCover:
     serializedVersion: 2
     m_Bits: 512

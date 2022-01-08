@@ -12,23 +12,40 @@ public class SettingsScript : MonoBehaviour
     
     private float currentVolume;
 
+    public GameObject settingsMenu;
+    private bool menuOut = false;
+
     // Start is called before the first frame update
     void Start()
     {
         currentVolume = PlayerPrefs.GetFloat("volume", 0f);
         audioMixer.SetFloat("volume", currentVolume);
         volumeSlider.value = currentVolume;
+        menuOut = false;
+        settingsMenu.SetActive(false);
         
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            menuOut = !menuOut;
+
+            settingsMenu.SetActive(menuOut);
+        }
     }
 
     public void ChangeScene(string scene)
     {
+        FindObjectOfType<AudioManager>().Play("HPblip");
         SceneManager.LoadScene(scene);
     }
 
 
     public void SetVolume(float volume)
     {
+        FindObjectOfType<AudioManager>().Play("HPblip");
         currentVolume = volume;
         audioMixer.SetFloat("volume", volume);
         PlayerPrefs.SetFloat("volume", currentVolume);
